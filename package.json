@@ -27,7 +27,7 @@
 		"url": "https://github.com/zen-fs/streams/issues"
 	},
 	"engines": {
-		"node": ">= 20"
+		"node": ">= 22"
 	},
 	"exports": {
 		".": "./dist/index.js",
@@ -52,12 +52,8 @@
 		"test": "node --test",
 		"prepublishOnly": "npm run build"
 	},
-	"dependencies": {
-		"eventemitter3": "^5.0.1"
-	},
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",
-		"@types/node": "^26.0.0",
 		"eslint": "^10.1.0",
 		"globals": "^17.11.0",
 		"prettier": "^3.2.5",
@@ -73,5 +69,9 @@
 		"printWidth": 150,
 		"arrowParens": "avoid",
 		"experimentalOperatorPosition": "start"
+	},
+	"dependencies": {
+		"@types/node": "^26.0.0",
+		"buffer": "^6.0.3"
 	}
 }
