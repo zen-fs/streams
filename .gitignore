@@ -1,0 +1,14 @@
+node_modules
+dist
+docs
+*.log
+tmp
+build
+*.tsbuildinfo
+
+.*
+!.gitignore
+!.gitattributes
+!.prettierignore
+!.github
+!.vscode

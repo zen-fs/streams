@@ -1,0 +1,77 @@
+{
+	"name": "@zenfs/streams",
+	"version": "0.0.1",
+	"description": "A modern node:stream polyfill",
+	"funding": {
+		"type": "individual",
+		"url": "https://github.com/sponsors/james-pre"
+	},
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"keywords": [
+		"stream",
+		"streams",
+		"node",
+		"polyfill",
+		"browser"
+	],
+	"type": "module",
+	"homepage": "https://github.com/zen-fs/streams",
+	"author": "James Prevett <jp@jamespre.dev> (https://jamespre.dev)",
+	"license": "LGPL-3.0-or-later",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/zen-fs/streams.git"
+	},
+	"bugs": {
+		"url": "https://github.com/zen-fs/streams/issues"
+	},
+	"engines": {
+		"node": ">= 20"
+	},
+	"exports": {
+		".": "./dist/index.js",
+		"./*": "./dist/*.js"
+	},
+	"files": [
+		"dist",
+		"license.md"
+	],
+	"publishConfig": {
+		"access": "public",
+		"provenance": true
+	},
+	"scripts": {
+		"format": "prettier --write .",
+		"format:check": "prettier --check .",
+		"spdx:check": "npx lice -a src tests/**/*.ts",
+		"spdx:fix": "npx lice -aw src tests/**/*.ts",
+		"lint": "eslint src tests",
+		"build": "tsc --build",
+		"dev": "tsc --build --watch",
+		"test": "node --test",
+		"prepublishOnly": "npm run build"
+	},
+	"dependencies": {
+		"eventemitter3": "^5.0.1"
+	},
+	"devDependencies": {
+		"@eslint/js": "^10.0.1",
+		"@types/node": "^26.0.0",
+		"eslint": "^10.1.0",
+		"globals": "^17.11.0",
+		"prettier": "^3.2.5",
+		"typescript": "^6.0.0",
+		"typescript-eslint": "^8.58.0",
+		"utilium": "^3.6.2"
+	},
+	"prettier": {
+		"singleQuote": true,
+		"useTabs": true,
+		"trailingComma": "es5",
+		"tabWidth": 4,
+		"printWidth": 150,
+		"arrowParens": "avoid",
+		"experimentalOperatorPosition": "start"
+	}
+}

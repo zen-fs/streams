@@ -1,0 +1,12 @@
+{
+	"extends": "../tsconfig.json",
+	"type": "module",
+	"compilerOptions": {
+		"noEmit": true,
+		"rootDir": "..",
+		"lib": ["ESNext", "ESNext.Disposable"],
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true
+	},
+	"include": ["**/*.ts", "*.ts"]
+}

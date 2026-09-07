@@ -1,0 +1,16 @@
+{
+	"compilerOptions": {
+		"module": "NodeNext",
+		"target": "ES2022",
+		"rootDir": "src",
+		"outDir": "dist",
+		"lib": ["ESNext"],
+		"strict": true,
+		"moduleResolution": "NodeNext",
+		"declaration": true,
+		"verbatimModuleSyntax": true,
+		"types": ["node"]
+	},
+	"include": ["src/**/*"],
+	"exclude": ["node_modules"]
+}
