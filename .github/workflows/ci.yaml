@@ -33,11 +33,11 @@ jobs:
             - name: License check
               run: npm run spdx:check
 
-            - name: Linting
-              run: npm run lint
-
             - name: Build
               run: npm run build
+
+            - name: Linting
+              run: npm run lint
 
             - name: Unit tests
               run: npm test
