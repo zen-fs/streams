@@ -1,6 +1,6 @@
 {
 	"name": "@zenfs/streams",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"description": "A modern node:stream polyfill",
 	"funding": {
 		"type": "individual",
