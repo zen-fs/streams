@@ -29,3 +29,8 @@ await pipeline(
 - Outside Node there is no `process.nextTick`, so callbacks fall back to `queueMicrotask`. Node drains its next-tick queue ahead of the microtask queue; the fallback has no equivalent, so those callbacks interleave with promise continuations rather than preceding them.
 - `finished()` on a WHATWG stream needs the closed-promise symbol that `node:stream` (and this package's `toWeb()`) attaches. A plain `ReadableStream` cannot be observed without consuming it, so it is rejected.
 - `setMaxListeners` is honored as state but never produces Node's `MaxListenersExceededWarning`.
+
+## License
+
+[@zenfs/streams](https://github.com/zen-fs/streams) is licensed under the [LGPL 3.0 or later](https://www.gnu.org/licenses/lgpl-3.0.html) and [COPYING.md](https://github.com/zen-fs/streams/blob/main/COPYING.md).
+Copyright © James Prevett and other ZenFS contributors.
