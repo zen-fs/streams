@@ -35,6 +35,7 @@ import { getDefaultHighWaterMark, getHighWaterMark } from './state.js';
 import { StringDecoder } from './string_decoder.js';
 import { nextTick, nop, validateObject } from './util.js';
 import {
+	isDisturbed,
 	isReadableStream,
 	kAutoDestroy,
 	kClosed,
@@ -861,6 +862,10 @@ export class Readable extends Stream implements Destroyable, NodeReadable {
 	/** Builds a Readable from an iterable, async iterable, string or Buffer. */
 	public static from(iterable: string | Buffer | Iterable<unknown> | AsyncIterable<unknown>, options?: ReadableOptions): Readable {
 		return from(Readable, iterable, options);
+	}
+
+	public static isDisturbed(stream: unknown): boolean {
+		return isDisturbed(stream);
 	}
 
 	/** Wraps an old-style stream, or any object with a compatible `data`/`end` event surface. */
