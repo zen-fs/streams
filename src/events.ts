@@ -80,7 +80,7 @@ export class EventEmitter {
 
 		if (doError) {
 			const er = args[0];
-			if (er instanceof Error) throw er;
+			if (Error.isError(er)) throw er;
 			const err = new ERR_UNHANDLED_ERROR(er);
 			(err as Error & { context?: unknown }).context = er;
 			throw err;

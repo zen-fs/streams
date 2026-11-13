@@ -479,7 +479,7 @@ export class Writable extends Stream implements Destroyable, NodeWritable {
 
 		if (chunk != null) {
 			const ret = writeChunk(this, chunk, (encoding as BufferEncoding | null) ?? null);
-			if (ret instanceof Error) err = ret;
+			if (Error.isError(ret)) err = ret;
 		}
 
 		// end() fully uncorks.
